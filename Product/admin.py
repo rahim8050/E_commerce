@@ -10,3 +10,4 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ['price']
     list_per_page = 25
 admin.site.register(Product,ProductAdmin)
+
