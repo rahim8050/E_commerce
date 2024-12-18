@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Rahim E-Commerce
+        <img class="rounded-circle logos" src="{% static 'images/kamiti.jpeg' %}" >
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Wardens' %}">Wardens</a>
+        </li>
+{#        <li class="nav-item">#}
+{#          <a class="nav-link" href="">statistcs</a>#}
+{#        </li>#}
+           <li class="nav-item">
+          <a class="nav-link" href="{% url 'AddWarden' %}">Add WArden</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact'%}">Contact Us</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About US</a>
+        </li>
+          </li>
+           <li class="nav-item">
+          <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
+        </li>
+      </ul>
+      <form class="d-flex" method="get" action="{% url 'SearchWarden' %}">
+        <input class="form-control me-2" type="text" name="Search" placeholder="Search">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>
