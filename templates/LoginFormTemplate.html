@@ -1,0 +1,22 @@
+{% extends 'Master.html' %}
+{% block title %}
+    Login
+{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Login</h2>
+    <form method="post" action="" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+    <p class="text-center mt-3">Don't have an account yet? <a href="">Sign up here</a></p>
+</div>
+{% endblock %}

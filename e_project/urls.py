@@ -23,6 +23,9 @@ from Product import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('base',views.base,name='base'),
+    path('signup',views.signup,name="signup"),
+    path('login',views.logins,name="logins"),
     path('products/<int:pk>/',views.product_detail,name='product_detail'),
     path('admin/', admin.site.urls),
 ]

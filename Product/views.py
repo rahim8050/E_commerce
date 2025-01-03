@@ -16,5 +16,19 @@ def product_detail(request,pk):
 
     return HttpResponse(f"the product is  {obj.pk}")
 
-def home(request):
-     return render(request,'Master.html')
+def home(request,*args,**kwargs):
+     context ={"data": "hello"}
+     return render(request,'Master.html',context)
+
+
+def base(request,*args,**kwargs):
+
+    return render(request,'base.html')
+
+
+def signup(request):
+    return render(request,'SignupForm.html')
+
+
+def logins(request):
+    return render (request,'LoginFormTemplate.html')
