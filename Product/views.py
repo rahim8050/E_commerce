@@ -28,6 +28,8 @@ def base(request,*args,**kwargs):
 
 def signup(request):
     return render(request,'SignupForm.html')
+def contactus(request):
+    return render(request,'contact.html')
 
 
 def logins(request):
