@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Product.apps.ProductConfig',
     'profiles.apps.ProfilesConfig',
-    'profiles.apps.emails'
+    'emails.apps.EmailsConfig',
+
 ]
 
 MIDDLEWARE = [
