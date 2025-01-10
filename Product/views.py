@@ -42,3 +42,7 @@ def logins(request):
 
 def viewed(request):
     return render(request,'view.html')
+
+
+def homes(request):
+    return render(request,'home.html')
