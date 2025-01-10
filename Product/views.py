@@ -15,8 +15,9 @@ def product_detail(request,pk):
      raise Http404
 
     return render(request,"products/views.html",{"object":obj})
-def product_list(request):
-    context ={"object_list": Product.objects.all()}
+def product_list(request,*args,**kwargs):
+    qs = Product.objects.all()
+    context ={"object_list": qs}
     return render(request,"products/list.html",context)
 
 def home(request,*args,**kwargs):
