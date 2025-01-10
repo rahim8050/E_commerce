@@ -3,7 +3,14 @@
 	<title>views</title>
 {% endblock %}
 {% block content   %}
-product views {{ object.id }}
+    {% include 'navbar.html' %}
+    {{ request.path }}
+    {% if  object.content %}
+     <p>{{ object.content }}</p>
+        {% else %}
+            <p>No product found</p>
+    {% endif %}
+ <p>{{ object.id }}</p>
     <h2>{{ object.title }}</h2>
     <p>{{ object.description }}</p>
     <p>{{ object.price }}</p>
