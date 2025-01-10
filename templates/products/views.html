@@ -4,12 +4,12 @@
 {% endblock %}
 {% block content   %}
     {% include 'navbar.html' %}
-    {{ request.path }}
-    {% if  object.content %}
-     <p>{{ object.content }}</p>
-        {% else %}
-            <p>No product found</p>
+   {% if   request.path == "/"  %}
+       welcome
+       {% else %}
+       {% include 'products/detailed_snippet.html' %}
     {% endif %}
+
  <p>{{ object.id }}</p>
     <h2>{{ object.title }}</h2>
     <p>{{ object.description }}</p>

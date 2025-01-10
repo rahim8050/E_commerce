@@ -1,0 +1,13 @@
+{% extends 'Master.html' %}
+{% block title %}
+<title>list views</title>
+{% endblock %}
+{% block content %}
+  {% if object_list %}
+  	<div class="mx-auto">
+    {{ object.title }}
+    {% include 'products/detailed_snippet.html' with product = object %}
+
+    </div>
+  {% endif %}
+{% endblock %}

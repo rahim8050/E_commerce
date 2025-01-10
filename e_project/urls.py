@@ -30,5 +30,6 @@ path('view',views.viewed,name="viewed"),
     path('login',views.logins,name="logins"),
 path('contactus',views.contactus,name="contactus"),
     path('products/<int:pk>/',views.product_detail,name='product_detail'),
+    path('products/',views.product_list,name='product_list'),
     path('admin/', admin.site.urls),
 ]
