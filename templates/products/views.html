@@ -1,0 +1,14 @@
+{% extends 'Master.html' %}
+{% block title %}
+	<title>views</title>
+{% endblock %}
+{% block content   %}
+product views {{ object.id }}
+    <h2>{{ object.title }}</h2>
+    <p>{{ object.description }}</p>
+    <p>{{ object.price }}</p>
+    <p>{{ object.category }}</p>
+    <p>{{ object.image }}</p>
+    <p>{{ object.created_at }}</p>
+
+{% endblock %}

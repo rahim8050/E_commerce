@@ -14,7 +14,7 @@ def product_detail(request,pk):
     except Product.DoesNotExist:
      raise Http404
 
-    return HttpResponse(f"the product is  {obj.pk}")
+    return render(request,"products/views.html",{"object":obj})
 
 def home(request,*args,**kwargs):
      context ={"data": "hello"}
@@ -34,3 +34,7 @@ def contactus(request):
 
 def logins(request):
     return render (request,'LoginFormTemplate.html')
+
+
+def viewed(request):
+    return render(request,'view.html')
