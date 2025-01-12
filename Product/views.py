@@ -29,7 +29,9 @@ def base(request,*args,**kwargs):
 
     return render(request,'base.html')
 
-
+def bad_view(request,*args,**kwargs):
+    print(request.GET)
+    return HttpResponse("do not touch this")
 def signup(request):
     return render(request,'SignupForm.html')
 def contactus(request):
