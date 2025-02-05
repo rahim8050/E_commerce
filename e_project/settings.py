@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Product.apps.ProductConfig',
     'profiles.apps.ProfilesConfig',
     'emails.apps.EmailsConfig',
+    'accounts.apps.AccountsConfig',
 
 ]
 
